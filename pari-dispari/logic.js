@@ -26,15 +26,13 @@ console.log(computerChoice);
 // Sommiamo i due numeri 
 let sum = userNumber + computerChoice;
 console.log(sum);
-// Stabiliamo se la somma dei due numeri è pari o dispari (usando una funzione) 
-if (sum % 2 === 0) {
-    console.log("Il numero è pari, quindi")
-} else {
-    console.log("Il numero è dispari, quindi");
-}
-// Dichiariamo chi ha vinto.
 
-if (userChoice) {
+// Stabiliamo se la somma dei due numeri è pari o dispari (usando una funzione) 
+function isEven () {
+    return sum % 2 === 0;
+}
+
+if (isEven (sum) && userChoice === "pari") {
 console.log("Complimenti Hai vinto");
 } else {
     console.log("Oh no hai perso!");
